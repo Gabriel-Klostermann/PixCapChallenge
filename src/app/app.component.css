@@ -1,0 +1,21 @@
+.main-container {
+    width: 60%;
+    height: 100%;
+}
+
+.json-employees {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+
+input, button {
+    width: 20%;
+    margin-bottom: 2%;
+}

@@ -1,0 +1,14 @@
+
+<div class="main-container">
+    <div class="input-group">
+        <h4>Type the ID's of the employee and supervisor and click the button to move!</h4>
+        <input type="text"  (keyup)="updateEmployeeID($event)" placeholder="Type the ID of the Employee here">
+        <input type="text"  (keyup)="updateSupervisorID($event)" placeholder="Type the ID of the Supervisor here">
+        <button type="button" [disabled]="employeeUniqueID === 0 || supervisorUniqueID === 0 " (click)="moveEmployee()">Move employee</button>
+        <button type="button"  (click)="undo()">Undo</button>
+        <button type="button"  (click)="redo()">Redo</button>
+        <p style="color: red;" *ngIf="showError">{{errorMessage}}</p>   
+    </div>
+    <pre class="json-employees">{{ceo | json}}</pre>
+</div>
+<router-outlet></router-outlet>
